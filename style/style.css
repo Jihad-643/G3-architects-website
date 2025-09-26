@@ -122,16 +122,13 @@ main>section {
 
 }
 
-
 .team {
     align-items: center;
-
 }
 
 .team-features {
     margin-left: 76px;
     max-width: 530px;
-
 }
 
 #quick-list {
@@ -139,7 +136,6 @@ main>section {
 }
 
 /* some fact card */
-
 
 .facts-container{
     display: grid;
@@ -173,7 +169,22 @@ main>section {
     margin-top: 24px;
 }
 
+/* sponsor */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
 
+.sponsor-item{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    gap: 150px;
+}
+
+.sponsor-item img{
+    filter: grayscale(100%);
+}
 /* responsive media query */
 
 /* small device */
@@ -187,14 +198,21 @@ main>section {
     }
 
     .team-img-container,
-    .facts-container {
+    .facts-container,
+    .sponsor-item {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    .facts-container{
+    .facts-container
+    {
         justify-items: center;
         gap:24px;
+    }
+    .sponsor-item {
+        justify-items: center;
+        gap: 70px;
+
     }
 
     .team-features {
@@ -212,4 +230,11 @@ main>section {
     .team-features {
         margin: 10px auto;
     }   
+
+     .sponsor-item,.facts-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+     }
 }
