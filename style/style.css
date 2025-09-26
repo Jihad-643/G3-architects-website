@@ -25,6 +25,11 @@
 .text-primary {
     color: #FF900E;
 }
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 
 
 /* main */
@@ -35,6 +40,8 @@ main {
 
 main>section {
     margin-top: 130px;
+    
+   
 }
 
 
@@ -67,7 +74,7 @@ main>section {
     text-decoration: none;
 }
 
-.navvar,
+.navbar,
 .banner {
     max-width: 1140px;
     margin: 0 auto;
@@ -85,7 +92,7 @@ main>section {
 
 }
 
-.banneer-title {
+.banner-title {
     font-weight: bold;
     font-size: 4rem;
 }
@@ -121,10 +128,6 @@ main>section {
 
 }
 
-.feature-title {
-    font-size: 2.8rem;
-}
-
 .team-features {
     margin-left: 76px;
     max-width: 530px;
@@ -134,6 +137,42 @@ main>section {
 #quick-list {
     font-weight: 500;
 }
+
+/* some fact card */
+
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+     margin-top: 10px;
+    margin-bottom: 5px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600 ;
+    margin-top: 5px;
+   
+}
+.fact-description{
+    max-width: 540px;
+    margin-bottom: 100px;
+    margin-top: 24px;
+}
+
 
 /* responsive media query */
 
@@ -147,9 +186,15 @@ main>section {
         flex-direction: column;
     }
 
-    .team-img-container {
+    .team-img-container,
+    .facts-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts-container{
+        justify-items: center;
+        gap:24px;
     }
 
     .team-features {
@@ -157,17 +202,14 @@ main>section {
     }
 }
 
+/* for medium device */
+
 @media screen and (min-width:576px) and (max-width:992px)
 {   
-
-    
     .team {
         flex-direction: column;
     }
     .team-features {
         margin: 10px auto;
-    }
-
-
-    
+    }   
 }
