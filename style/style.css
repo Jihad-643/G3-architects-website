@@ -25,6 +25,7 @@
 .text-primary {
     color: #FF900E;
 }
+
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -40,12 +41,8 @@ main {
 
 main>section {
     margin-top: 130px;
-    
-   
+
 }
-
-
-
 
 /* header style */
 
@@ -88,7 +85,6 @@ main>section {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 50px;
-
 
 }
 
@@ -135,14 +131,56 @@ main>section {
     font-weight: 500;
 }
 
+/* feature you enjoy*/
+
+.features {
+    gap: 146px;
+}
+
+#Features-section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 21px;
+
+}
+
+.feature-card {
+    padding: 30px 42px;
+    box-shadow: 0px 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.feature-card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#Experience-badge {
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#Experience-year {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#Experience-btn-font {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 /* some fact card */
 
-.facts-container{
+.facts-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-.fact-card{
+.fact-card {
     border: 1px solid #FF900E;
     width: 240px;
     height: 240px;
@@ -151,40 +189,54 @@ main>section {
     justify-content: center;
     text-align: center;
 }
-.fact-number{
+
+.fact-number {
     font-size: 2.8rem;
     font-weight: 600;
-     margin-top: 10px;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
-.fact-name{
+
+.fact-name {
     font-size: 1.25rem;
-    font-weight: 600 ;
+    font-weight: 600;
     margin-top: 5px;
-   
+
 }
-.fact-description{
+
+.fact-description {
     max-width: 540px;
     margin-bottom: 100px;
     margin-top: 24px;
 }
 
 /* sponsor */
-.sponsor-info{
+.sponsor-info {
     max-width: 540px;
     margin: 50px auto;
     text-align: center;
 }
 
-.sponsor-item{
+.sponsor-item {
     display: grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 150px;
 }
 
-.sponsor-item img{
+.sponsor-item img {
     filter: grayscale(100%);
 }
+
+.copyright {
+    max-width: 1440px;
+    padding: 39px 410px;
+    text-align: center;
+    margin-top: 130px;
+    background-color: rgba(255, 144, 14, 0.1);
+    margin-bottom: 216px;
+
+}
+
 /* responsive media query */
 
 /* small device */
@@ -193,7 +245,8 @@ main>section {
 
     .navbar,
     .nav-links,
-   .team {
+    .team,
+    .features {
         flex-direction: column;
     }
 
@@ -204,37 +257,93 @@ main>section {
         grid-template-columns: 1fr;
     }
 
-    .facts-container
-    {
+    .facts-container {
         justify-items: center;
-        gap:24px;
+        gap: 24px;
     }
+
     .sponsor-item {
         justify-items: center;
         gap: 70px;
-
     }
 
     .team-features {
         margin-left: 20px;
     }
-}
 
-/* for medium device */
-
-@media screen and (min-width:576px) and (max-width:992px)
-{   
-    .team {
-        flex-direction: column;
+    #features-img {
+        width: 100%;
     }
-    .team-features {
-        margin: 10px auto;
-    }   
 
-     .sponsor-item,.facts-container{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 50px;
-        justify-items: center;
-     }
+    #Experience-badge {
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 20px 25px;
+
+    }
+
+    #Experience-btn-font {
+        font-size: 12px;
+        font-weight: 300;
+
+    }
+
+    #Experience-year {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .copyright {
+        padding: 15px 20px;
+    }
 }
+
+    /* for medium device */
+
+    @media screen and (min-width:576px) and (max-width:992px) {
+
+            .team,
+            .features {
+                flex-direction: column;
+            }
+
+            .team-features {
+                margin: 10px auto;
+            }
+
+            #features-img {
+                width: 100%;
+            }
+
+            .sponsor-item,
+            .facts-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+                justify-items: center;
+            }
+
+            #Experience-badge {
+                margin-top: 20px;
+                margin-left: 20px;
+                padding: 20px 25px;
+
+            }
+
+            #Experience-btn-font {
+                font-size: 12px;
+                font-weight: 300;
+
+            }
+
+            #Experience-year {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            .copyright {
+                padding: 30px 60px;
+
+            }
+        }
+    
